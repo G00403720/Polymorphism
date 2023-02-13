@@ -1,15 +1,29 @@
-package ie.atu.productv3;
+package ie.atu.productv5;
 
 import java.text.NumberFormat;
 
-public class Product {
-
+public class Software extends Product {
+    private String version;
     private String code;
     private String description;
     private double price;
     protected static int count = 0;
 
-    public Product() {
+    public Software() {
+        super();
+        version = "";
+        description = "";
+        code = "";
+        price = 0.0;
+        count++;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public String getVersion() {
+        return version;
     }
 
     public void setCode(String code) {
@@ -41,15 +55,12 @@ public class Product {
         return currency.format(price);
     }
 
-    @Override
     public String toString() {
-        return description;
+        return description + " by " + version;
     }
 
     public static int getCount() {
         return count;
     }
 
-    public void setArtist(String part_of_the_coloumbia_group) {
-    }
 }

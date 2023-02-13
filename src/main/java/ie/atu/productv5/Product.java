@@ -1,9 +1,8 @@
-package ie.atu.productv3;
+package ie.atu.productv5;
 
 import java.text.NumberFormat;
 
 public class Product {
-
     private String code;
     private String description;
     private double price;
@@ -48,8 +47,5 @@ public class Product {
 
     public static int getCount() {
         return count;
-    }
-
-    public void setArtist(String part_of_the_coloumbia_group) {
     }
 }
